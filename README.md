@@ -32,9 +32,9 @@ Finish with brainfork: Y
 % brainfork's Y to fork a process  
 & this is Y in the two interpreters in the archive  
 
-Finally, add in my own stuff: {}*$^_='`  
-{ while current cell is zero  
-} wend  
+Finally, add in my own stuff: {}*$^_='\`  
+\{ while current cell is zero  
+\} wend  
 \* yield processor  
 $ return  
 ' break, as in program flow control  
@@ -92,7 +92,7 @@ shared resource, the screen. Each process prints out three characters:
 "HI\n". A semaphore ensures that only one process writes to the screen at 
 a time. (This example assumes a shared base memory for "big bang" processes)
 
-~^@  
+\~^@  
 ++++++++[>+++++++++<-]>>++++++++++<<  ~_~>.+.>.~<<^  @  
 ++++++++[>+++++++++<-]>>++++++++++<<  ~_~>.+.>.~<<^  
 
