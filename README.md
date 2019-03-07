@@ -6,10 +6,10 @@ Interpreter for the brains bf derivative.
 These lead into the brains interpreter. brains is a brainfuck derivative that cobbles together the best parts of many other esoteric languages, then breaks them. The commands are:  
 
 Firstly, all of brainfuck: +-<>,.[]  
-+ increment current cell  
-- decrement current cell  
+\+ increment current cell  
+\- decrement current cell  
 < move tape left  
-> move tape right  
+\> move tape right  
 , input current cell  
 . output current cell  
 [ while current cell is not zero  
@@ -35,7 +35,7 @@ Finish with brainfork: Y
 Finally, add in my own stuff: {}*$^_='`  
 { while current cell is zero  
 } wend  
-* yield processor  
+\* yield processor  
 $ return  
 ' break, as in program flow control  
 ` continue  
@@ -92,13 +92,13 @@ shared resource, the screen. Each process prints out three characters:
 "HI\n". A semaphore ensures that only one process writes to the screen at 
 a time. (This example assumes a shared base memory for "big bang" processes)
 
-~^@
-++++++++[>+++++++++<-]>>++++++++++<<  ~_~>.+.>.~<<^  @
-++++++++[>+++++++++<-]>>++++++++++<<  ~_~>.+.>.~<<^
+~^@  
+++++++++[>+++++++++<-]>>++++++++++<<  ~_~>.+.>.~<<^  @  
+++++++++[>+++++++++<-]>>++++++++++<<  ~_~>.+.>.~<<^  
 
 No matter how many copies of the
 
-++++++++[>+++++++++<-]>>++++++++++<<  ~_~>.+.>.~<<^
+++++++++[>+++++++++<-]>>++++++++++<<  ~_~>.+.>.~<<^  
 
 process are present, nor the order in which process are run, nor the length 
 of time each process is given to run will change the output. There will be as 
@@ -108,12 +108,12 @@ will be printed.
 
 This second example involves a multi-threaded program:
 
-+>&
+\+>&  
 
-(>>++++[>>++++++++<<-]<<|
-======= ================================ ====== ====== ====== ====== ===)
+(>>++++[>>++++++++<<-]<<|  
+======= ================================ ====== ====== ====== ====== ===)  
 
->>  ++++++++[>>+++++++++<<-]++++++++++   <<(<<_>>|<_>)>>>>.+.<<.<<(<)<^
+\>>  ++++++++[>>+++++++++<<-]++++++++++   <<(<<_>>|<_>)>>>>.+.<<.<<(<)<^  
 
 One thread prints out "hi\n", while the other prints out "HI\n". If these 
 threads each execute from one to six instructions per scheduling, the "hi\n" 
@@ -121,15 +121,15 @@ thread will print first. Seven or more instructions per scheduling, and the
 "HI\n" thread prints first. What is important is that one-and-only-one thread 
 gets to print to the screen at the same time. In contrast, for
 
->&
-(>>++++[>>++++++++<<-]<<)
->>  ++++++++[>>+++++++++<<-]++++++++++   <<(<<_>>)>>>>.+.<<.<<(<)<^
+\>&  
+(>>++++[>>++++++++<<-]<<)  
+\>>  ++++++++[>>+++++++++<<-]++++++++++   <<(<<_>>)>>>>.+.<<.<<(<)<^  
 
 the "HI\n" thread ALWAYS prints to the screen first, while in
 
->&
-(>>++++[>>++++++++<<-]<<)
->>  ++++++++[>>+++++++++<<-]++++++++++   <<(|<_>)>>>>.+.<<.<<(<)<^
+\>&  
+(>>++++[>>++++++++<<-]<<)  
+\>>  ++++++++[>>+++++++++<<-]++++++++++   <<(|<_>)>>>>.+.<<.<<(<)<^  
 
 the "hi\n" thread prints to the screen first, ALWAYS.  
 
