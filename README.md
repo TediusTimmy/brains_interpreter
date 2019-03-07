@@ -93,12 +93,12 @@ shared resource, the screen. Each process prints out three characters:
 a time. (This example assumes a shared base memory for "big bang" processes)
 
 \~^@  
-++++++++[>+++++++++<-]>>++++++++++<<  \~\_\~>.+.>.~<<^  @  
-++++++++[>+++++++++<-]>>++++++++++<<  \~\_\~>.+.>.~<<^  
+++++++++[>+++++++++<-]>>++++++++++<<  \~\_\~>.+.>.\~<<^  @  
+++++++++[>+++++++++<-]>>++++++++++<<  \~\_\~>.+.>.\~<<^  
 
 No matter how many copies of the
 
-++++++++[>+++++++++<-]>>++++++++++<<  \~\_\~>.+.>.~<<^  
+++++++++[>+++++++++<-]>>++++++++++<<  \~\_\~>.+.>.\~<<^  
 
 process are present, nor the order in which process are run, nor the length 
 of time each process is given to run will change the output. There will be as 
