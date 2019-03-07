@@ -3,7 +3,7 @@ Interpreter for the brains bf derivative.
 
 ## BRAINS:
 
-These lead into the brains interpreter. brains is a brainfuck derivative that cobbles together the best parts of many other esoteric languages, then breaks them. The commands are:  
+brains is a brainfuck derivative that cobbles together the best parts of many other esoteric languages, then breaks them. The commands are:  
 
 Firstly, all of brainfuck: +-<>,.[]  
 \+ increment current cell  
@@ -93,12 +93,12 @@ shared resource, the screen. Each process prints out three characters:
 a time. (This example assumes a shared base memory for "big bang" processes)
 
 \~^@  
-++++++++[>+++++++++<-]>>++++++++++<<  ~_~>.+.>.~<<^  @  
-++++++++[>+++++++++<-]>>++++++++++<<  ~_~>.+.>.~<<^  
+++++++++[>+++++++++<-]>>++++++++++<<  \~_\~>.+.>.~<<^  @  
+++++++++[>+++++++++<-]>>++++++++++<<  \~_\~>.+.>.~<<^  
 
 No matter how many copies of the
 
-++++++++[>+++++++++<-]>>++++++++++<<  ~_~>.+.>.~<<^  
+++++++++[>+++++++++<-]>>++++++++++<<  \~_\~>.+.>.~<<^  
 
 process are present, nor the order in which process are run, nor the length 
 of time each process is given to run will change the output. There will be as 
